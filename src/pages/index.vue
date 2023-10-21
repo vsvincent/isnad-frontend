@@ -8,7 +8,8 @@ const name = ref(user.savedName)
 const router = useRouter()
 function go() {
   if (name.value)
-    router.push(`/hi/${encodeURIComponent(name.value)}`)
+    router.push(`/comingSoon`)
+    // router.push(`/search/${encodeURIComponent(name.value)}`)
 }
 
 const { t } = useI18n()
@@ -20,8 +21,8 @@ const { t } = useI18n()
       <div i-carbon-campsite inline-block />
     </div>
     <p>
-      <a rel="noreferrer" href="https://github.com/antfu/vitesse" target="_blank">
-        Vitesse
+      <a rel="noreferrer" href="/" target="_blank">
+        Isnad
       </a>
     </p>
     <p>
@@ -30,13 +31,13 @@ const { t } = useI18n()
 
     <div py-4 />
 
-    <TheInput
+    <Searchbar
       v-model="name"
-      :placeholder="t('intro.whats-your-name')"
+      :placeholder="t('home.searchbar-placeholder')"
       autocomplete="false"
       @keydown.enter="go"
     />
-    <label class="hidden" for="input">{{ t('intro.whats-your-name') }}</label>
+    <label class="hidden" for="input">{{ t('home.searchbar-placeholder') }}</label>
 
     <div>
       <button

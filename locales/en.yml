@@ -6,9 +6,14 @@ button:
   toggle_dark: Toggle dark mode
   toggle_langs: Change languages
 intro:
-  desc: Opinionated Vite Starter Template
+  desc: Chain of transmission database
   dynamic-route: Demo of dynamic route
+  result-placeholder: Coming soon!
   hi: Hi, {name}!
   aka: Also known as
   whats-your-name: What's your name?
+home:
+  searchbar-placeholder: Search by text, narrator, or book
+islam:
+  inshallah: In shaa Allah
 not-found: Not found

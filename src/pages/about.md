@@ -1,0 +1,1 @@
+Isnad is a web-based tool for checking chains of transmission for various hadith. It is important to note: the Isnad developer is not a person of knowledge and will very likely make mistakes over the course of development. All translations will be taken from reliable sources which will be provided where they are shown.

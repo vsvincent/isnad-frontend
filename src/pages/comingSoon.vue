@@ -1,0 +1,34 @@
+<script setup lang="ts">
+const props = defineProps<{ name: string }>()
+const router = useRouter()
+const user = useUserStore()
+const { t } = useI18n()
+
+watchEffect(() => {
+  user.setNewName(props.name)
+})
+</script>
+
+<template>
+  <div>
+    <div text-4xl>
+      <div i-carbon-pedestrian inline-block />
+    </div>
+    <p>
+      {{ t('intro.result-placeholder', { name: props.name }) }}
+    </p>
+
+    <p text-sm opacity-75>
+      <em>{{ t('islam.inshallah') }}</em>
+    </p>
+
+    <div>
+      <button
+        m="3 t6" text-sm btn
+        @click="router.back()"
+      >
+        {{ t('button.back') }}
+      </button>
+    </div>
+  </div>
+</template>
