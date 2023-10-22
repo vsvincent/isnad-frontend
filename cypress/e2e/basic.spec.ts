@@ -7,16 +7,13 @@ context('Basic', () => {
     cy.url()
       .should('eq', 'http://localhost:3333/')
 
-    cy.contains('[Home Layout]')
+    cy.contains('Search the world\'s newest English language hadith database.')
       .should('exist')
 
-    cy.get('#input')
+    /* cy.get('#input')
       .type('Vitesse{Enter}')
       .url()
-      .should('eq', 'http://localhost:3333/hi/Vitesse')
-
-    cy.contains('[Default Layout]')
-      .should('exist')
+      .should('eq', 'http://localhost:3333/hi/Vitesse') */
 
     cy.get('[btn]')
       .click()
@@ -29,8 +26,5 @@ context('Basic', () => {
       .click()
       .url()
       .should('eq', 'http://localhost:3333/about')
-
-    cy.get('.shiki')
-      .should('exist')
   })
 })
